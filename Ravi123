@@ -1,0 +1,91 @@
+package Core_Java;
+abstract class automation
+{
+	abstract void jmeter();
+	abstract void A2();
+}
+	
+class python extends automation
+{
+	public void jmeter() 
+	{
+		System.out.println("Hi .. Selenium");
+	}
+	public void A2()
+	{
+		System.out.println("Selenium how are you");
+	}
+
+	}
+
+public class Abstract_Exp4 {
+
+	public static void main(String[] args) {
+		python obj=new python();
+		obj.jmeter();
+		obj.A2();
+		
+	}
+
+}
+
+package Core_Java;
+
+import java.util.Scanner;
+
+public class Range_Prime {
+
+	public static void main(String[] args) {
+	int min,max,i,j;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Min Value");
+	min=sc.nextInt();
+	System.out.println("Enter Max value");
+	max=sc.nextInt();
+	for(i=min;i<=max;i++)
+	{
+		for( j=2;j<i;j++)
+		{
+			if(i%j==0)
+				break;
+		}
+		if(i==j)
+		{
+			System.out.println("this is values:"+ i +" ");
+		}
+	}
+
+	}
+
+}
+
+package Core_Java;
+
+import java.util.Scanner;
+
+public class Revesrse_Palindrom {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Please enter one value");
+		int num=sc.nextInt();
+		int con=num;
+		int rev=0;
+		while(num!=0)
+		{
+			rev=rev*10+num%10;
+			num=num/10;
+		}
+		//System.out.println("The reverse number:"+rev);
+		if(con==rev)
+		{
+			System.out.println("This is palindrom");
+		}
+		else
+		{
+			System.out.println("this is not palindrom");
+		}
+
+	}
+
+}
